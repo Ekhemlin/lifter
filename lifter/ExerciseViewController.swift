@@ -119,8 +119,7 @@ class ExerciseViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let editExerciseView = storyBoard.instantiateViewController(withIdentifier: "NewExerciseViewController") as! NewExerciseViewController
         editExerciseView.editExercise = true
-        self.present(editExerciseView, animated: true, completion: nil)
-        
+        self.navigationController?.pushViewController(editExerciseView, animated: true)
     }
     
 

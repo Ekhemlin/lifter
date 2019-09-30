@@ -59,7 +59,7 @@ class NewExerciseViewController: UIViewController, UITextFieldDelegate {
                 globalExercise.increment = increment
             }
         }
-        performSegue(withIdentifier: "backToMenu", sender: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
 }

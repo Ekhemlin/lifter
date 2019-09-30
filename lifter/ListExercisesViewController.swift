@@ -24,13 +24,19 @@ class ListExercisesViewController: UIViewController, UITableViewDataSource, UITa
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        exerciseArray = realm.objects(Exercise.self)
+        self.loadView()
+    }
+    
     //IBACTIONS
     
     @IBAction func trackExercisePressed(_ sender: Any) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let newViewController = storyBoard.instantiateViewController(withIdentifier: "ExerciseViewController") as! ExerciseViewController
-        self.present(newViewController, animated: true, completion: nil)
-//        let viewController: NewExerciseViewController = self.storyboard?.instantiateViewController(withIdentifier: "VC") as! NewExerciseViewController
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let newViewController = storyBoard.instantiateViewController(withIdentifier: "ExerciseViewController") as! ExerciseViewController
+//        self.present(newViewController, animated: true, completion: nil)
+////        let viewController: NewExerciseViewController = self.storyboard?.instantiateViewController(withIdentifier: "VC") as! NewExerciseViewController
 //        self.present(viewController, animated: true, completion: nil)
     }
     

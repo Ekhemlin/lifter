@@ -31,7 +31,6 @@ class ExerciseTableViewCell: UITableViewCell {
     }
     @IBAction func liftCellButtonClicked(_ sender: UIButton) {
         globalExercise = owner
-        self.view.performSegue(withIdentifier: "showExercise", sender: nil)
     }
     
 }

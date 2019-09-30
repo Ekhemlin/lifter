@@ -57,6 +57,7 @@ class NewExerciseViewController: UIViewController, UITextFieldDelegate {
                 globalExercise.startingWeight = weight
                 globalExercise.name = exerciseName
                 globalExercise.increment = increment
+                
             }
         }
         self.navigationController?.popViewController(animated: true)

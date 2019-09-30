@@ -10,12 +10,29 @@ import UIKit
 import SwiftCharts
 import CoreML
 
-class HistoryViewController: UIViewController {
-
-    weak var graph: Chart!
+class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
+    weak var graph: Chart!
+
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var predLabel: UILabel!
+    @IBOutlet weak var historyTableView: UITableView!
+    var setHistory : [ExerciseSet] = []
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return setHistory.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let liftCell = tableView.dequeueReusableCell(withIdentifier: "ExerciseHistoryTableViewCell", for: indexPath) as? ExerciseHistoryTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of setCell.")
+        }
+        liftCell.weightLabel.text = String(setHistory[indexPath.row].weight)
+        liftCell.repsLabel.text = String(setHistory[indexPath.row].reps)
+        return liftCell
+    }
     
     override func viewDidLoad() {
         nameLabel.text = globalExercise.name
@@ -27,6 +44,7 @@ class HistoryViewController: UIViewController {
         var count = 0
         for workout in globalExercise.workoutHistoryList{
             for set in workout.workoutSetList{
+                setHistory.append(set)
                 chartData.append((String(count), set.weight))
                 count+=1
             }
@@ -39,7 +57,7 @@ class HistoryViewController: UIViewController {
             valsAxisConfig: ChartAxisConfig(from: yMin, to: yMax, by:globalExercise.increment)
         )
 
-        let frame = CGRect(x: 10, y: 200, width: 300, height: 600)
+        let frame = CGRect(x: 10, y: 200, width: 300, height: 300)
                 
         let chart = BarsChart(
             frame: frame,

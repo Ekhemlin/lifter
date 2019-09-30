@@ -11,7 +11,6 @@
 		A71AAB62217D51E600BE8E06 /* NewExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AAB61217D51E600BE8E06 /* NewExerciseViewController.swift */; };
 		A71AAB64217D582C00BE8E06 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AAB63217D582C00BE8E06 /* ExerciseViewController.swift */; };
 		A71AAB662184C7A000BE8E06 /* setTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AAB652184C7A000BE8E06 /* setTableViewCell.swift */; };
-		A71AAB6A2184C87800BE8E06 /* setTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AAB692184C87800BE8E06 /* setTableView.swift */; };
 		A7338414217D48B300D4FC0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7338413217D48B300D4FC0D /* AppDelegate.swift */; };
 		A7338416217D48B300D4FC0D /* ListExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7338415217D48B300D4FC0D /* ListExercisesViewController.swift */; };
 		A7338419217D48B300D4FC0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7338417217D48B300D4FC0D /* Main.storyboard */; };
@@ -20,7 +19,7 @@
 		A7338429217D48B500D4FC0D /* lifterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7338428217D48B500D4FC0D /* lifterUITests.swift */; };
 		A733843D217D48FF00D4FC0D /* classes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A733843C217D48FF00D4FC0D /* classes.swift */; };
 		A733843F217D4A5200D4FC0D /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A733843E217D4A5200D4FC0D /* ExerciseTableViewCell.swift */; };
-		A7338441217D4A6F00D4FC0D /* ExerciseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7338440217D4A6F00D4FC0D /* ExerciseTableView.swift */; };
+		A7500C05234264EE0084C17C /* ExerciseHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7500C04234264EE0084C17C /* ExerciseHistoryTableViewCell.swift */; };
 		A7D21C8A21E3E9F8008FED63 /* progressPredictor.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A7D21C8921E3E9F8008FED63 /* progressPredictor.mlmodel */; };
 		A7FB399621C712550024314F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FB399521C712550024314F /* HistoryViewController.swift */; };
 		C2C2AC1653CD0DD2B46D2294 /* Pods_lifterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C249F71EA13F87BF21F64821 /* Pods_lifterUITests.framework */; };
@@ -42,7 +41,6 @@
 		A71AAB61217D51E600BE8E06 /* NewExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewExerciseViewController.swift; sourceTree = "<group>"; };
 		A71AAB63217D582C00BE8E06 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		A71AAB652184C7A000BE8E06 /* setTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setTableViewCell.swift; sourceTree = "<group>"; };
-		A71AAB692184C87800BE8E06 /* setTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setTableView.swift; sourceTree = "<group>"; };
 		A7338410217D48B300D4FC0D /* lifter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lifter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7338413217D48B300D4FC0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7338415217D48B300D4FC0D /* ListExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListExercisesViewController.swift; sourceTree = "<group>"; };
@@ -55,8 +53,8 @@
 		A733842A217D48B500D4FC0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A733843C217D48FF00D4FC0D /* classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classes.swift; sourceTree = "<group>"; };
 		A733843E217D4A5200D4FC0D /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
-		A7338440217D4A6F00D4FC0D /* ExerciseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableView.swift; sourceTree = "<group>"; };
 		A7500C012341B3B40084C17C /* SwiftCharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftCharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7500C04234264EE0084C17C /* ExerciseHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		A7D21C8921E3E9F8008FED63 /* progressPredictor.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = progressPredictor.mlmodel; sourceTree = "<group>"; };
 		A7FB399521C712550024314F /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		A7FB399721C716330024314F /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,10 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				A733843C217D48FF00D4FC0D /* classes.swift */,
-				A733843E217D4A5200D4FC0D /* ExerciseTableViewCell.swift */,
-				A7338440217D4A6F00D4FC0D /* ExerciseTableView.swift */,
-				A71AAB692184C87800BE8E06 /* setTableView.swift */,
-				A71AAB652184C7A000BE8E06 /* setTableViewCell.swift */,
 				A7338412217D48B300D4FC0D /* lifter */,
 				A7338427217D48B500D4FC0D /* lifterUITests */,
 				A7338411217D48B300D4FC0D /* Products */,
@@ -140,16 +134,19 @@
 		A7338412217D48B300D4FC0D /* lifter */ = {
 			isa = PBXGroup;
 			children = (
-				A7D21C8921E3E9F8008FED63 /* progressPredictor.mlmodel */,
-				A7338413217D48B300D4FC0D /* AppDelegate.swift */,
 				A7338415217D48B300D4FC0D /* ListExercisesViewController.swift */,
 				A71AAB63217D582C00BE8E06 /* ExerciseViewController.swift */,
 				A71AAB61217D51E600BE8E06 /* NewExerciseViewController.swift */,
-				A7338417217D48B300D4FC0D /* Main.storyboard */,
 				A7FB399521C712550024314F /* HistoryViewController.swift */,
-				A733841A217D48B500D4FC0D /* Assets.xcassets */,
+				A7338413217D48B300D4FC0D /* AppDelegate.swift */,
+				A733843E217D4A5200D4FC0D /* ExerciseTableViewCell.swift */,
+				A71AAB652184C7A000BE8E06 /* setTableViewCell.swift */,
+				A7500C04234264EE0084C17C /* ExerciseHistoryTableViewCell.swift */,
+				A7338417217D48B300D4FC0D /* Main.storyboard */,
 				A733841C217D48B500D4FC0D /* LaunchScreen.storyboard */,
 				A733841F217D48B500D4FC0D /* Info.plist */,
+				A7D21C8921E3E9F8008FED63 /* progressPredictor.mlmodel */,
+				A733841A217D48B500D4FC0D /* Assets.xcassets */,
 			);
 			path = lifter;
 			sourceTree = "<group>";
@@ -333,15 +330,14 @@
 			files = (
 				A71AAB662184C7A000BE8E06 /* setTableViewCell.swift in Sources */,
 				A7D21C8A21E3E9F8008FED63 /* progressPredictor.mlmodel in Sources */,
+				A7500C05234264EE0084C17C /* ExerciseHistoryTableViewCell.swift in Sources */,
 				A733843D217D48FF00D4FC0D /* classes.swift in Sources */,
 				A71AAB64217D582C00BE8E06 /* ExerciseViewController.swift in Sources */,
 				A7FB399621C712550024314F /* HistoryViewController.swift in Sources */,
 				A733843F217D4A5200D4FC0D /* ExerciseTableViewCell.swift in Sources */,
 				A7338416217D48B300D4FC0D /* ListExercisesViewController.swift in Sources */,
 				A7338414217D48B300D4FC0D /* AppDelegate.swift in Sources */,
-				A7338441217D4A6F00D4FC0D /* ExerciseTableView.swift in Sources */,
 				A71AAB62217D51E600BE8E06 /* NewExerciseViewController.swift in Sources */,
-				A71AAB6A2184C87800BE8E06 /* setTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

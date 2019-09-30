@@ -16,7 +16,6 @@ class ExerciseTableViewCell: UITableViewCell {
     var view = UIViewController()
     
     
-    
     @IBOutlet weak var liftCellButton: UIButton!
     @IBOutlet weak var liftCellLabel: UILabel!
     

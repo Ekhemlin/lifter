@@ -1,19 +1,17 @@
 //
-//  setTableViewCell.swift
+//  ExerciseHistoryTableViewCell.swift
 //  lifter
 //
-//  Created by EItan Khemlin  on 2018-10-27.
-//  Copyright © 2018 EItan Khemlin . All rights reserved.
+//  Created by Eitan Khemlin on 2019-09-30.
+//  Copyright © 2019 EItan Khemlin . All rights reserved.
 //
 
 import UIKit
 
-class setTableViewCell: UITableViewCell {
+class ExerciseHistoryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var repsLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
-    
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()

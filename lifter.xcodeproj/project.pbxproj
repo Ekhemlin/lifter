@@ -23,7 +23,6 @@
 		A7338441217D4A6F00D4FC0D /* ExerciseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7338440217D4A6F00D4FC0D /* ExerciseTableView.swift */; };
 		A7D21C8A21E3E9F8008FED63 /* progressPredictor.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = A7D21C8921E3E9F8008FED63 /* progressPredictor.mlmodel */; };
 		A7FB399621C712550024314F /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FB399521C712550024314F /* HistoryViewController.swift */; };
-		A7FB399C21C74E9E0024314F /* SwiftChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7FB399B21C74E9E0024314F /* SwiftChart.framework */; };
 		C2C2AC1653CD0DD2B46D2294 /* Pods_lifterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C249F71EA13F87BF21F64821 /* Pods_lifterUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,19 +35,6 @@
 			remoteInfo = lifter;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A733843B217D48EF00D4FC0D /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5AAB15946999EFAEA0F16FD6 /* Pods-lifterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lifterUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lifterUITests/Pods-lifterUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +56,7 @@
 		A733843C217D48FF00D4FC0D /* classes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classes.swift; sourceTree = "<group>"; };
 		A733843E217D4A5200D4FC0D /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		A7338440217D4A6F00D4FC0D /* ExerciseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableView.swift; sourceTree = "<group>"; };
+		A7500C012341B3B40084C17C /* SwiftCharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftCharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D21C8921E3E9F8008FED63 /* progressPredictor.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = progressPredictor.mlmodel; sourceTree = "<group>"; };
 		A7FB399521C712550024314F /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		A7FB399721C716330024314F /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,7 +73,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7FB399C21C74E9E0024314F /* SwiftChart.framework in Frameworks */,
 				7F50A165D5433B83DC4D74DC /* Pods_lifter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +91,7 @@
 		43C00E8D98E42F3026F02E09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A7500C012341B3B40084C17C /* SwiftCharts.framework */,
 				A7FB399B21C74E9E0024314F /* SwiftChart.framework */,
 				A7FB399921C716390024314F /* ChartsRealm.framework */,
 				A7FB399721C716330024314F /* Charts.framework */,
@@ -187,7 +174,6 @@
 				A733840C217D48B300D4FC0D /* Sources */,
 				A733840D217D48B300D4FC0D /* Frameworks */,
 				A733840E217D48B300D4FC0D /* Resources */,
-				A733843B217D48EF00D4FC0D /* Embed Frameworks */,
 				AF1E67DCFC086B610FC13331 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (

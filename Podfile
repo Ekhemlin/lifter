@@ -9,9 +9,8 @@ target 'lifter' do
 
  pod 'Realm'
  pod 'RealmSwift'
- 
- pod 'SwiftChart'
-  
+ pod 'SwiftCharts', '~> 0.6.5'
+
   target 'lifterUITests' do
     inherit! :search_paths
     # Pods for testing

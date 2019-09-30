@@ -1,4 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-lifter/Pods-lifter-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Realm/Realm.framework
 ${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework
-${BUILT_PRODUCTS_DIR}/SwiftChart/SwiftChart.framework
+${BUILT_PRODUCTS_DIR}/SwiftCharts/SwiftCharts.framework

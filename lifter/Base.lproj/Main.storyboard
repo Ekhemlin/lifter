@@ -297,16 +297,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xnw-hZ-gZ2" customClass="Chart" customModule="SwiftChart">
-                                <rect key="frame" x="0.0" y="198" width="375" height="481"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES"/>
-                                </accessibility>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jag-HX-cKG">
-                                <rect key="frame" x="16" y="90" width="71" height="40"/>
+                                <rect key="frame" x="15" y="90" width="70" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Predict "/>
                                 <connections>
@@ -332,7 +324,6 @@
                         <viewLayoutGuide key="safeArea" id="a77-Si-7qY"/>
                     </view>
                     <connections>
-                        <outlet property="graph" destination="xnw-hZ-gZ2" id="f1b-bX-jUp"/>
                         <outlet property="nameLabel" destination="7s8-sS-pCa" id="2EX-Jy-Ya9"/>
                         <outlet property="predLabel" destination="sPr-ak-WzC" id="uQT-QL-59D"/>
                     </connections>

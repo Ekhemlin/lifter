@@ -7,12 +7,12 @@
 //
 
 import UIKit
-import SwiftChart
+import SwiftCharts
 import CoreML
 
 class HistoryViewController: UIViewController {
 
-    @IBOutlet weak var graph: Chart!
+    weak var graph: Chart!
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var predLabel: UILabel!
@@ -22,12 +22,12 @@ class HistoryViewController: UIViewController {
         var workoutHistory = globalExercise.workoutHistoryList
         var weightChartArray: [Double] = []
         
-        var test: [(Int, Double)] = []
+        var test: [(String, Double)] = []
         
         var count = 0
         for workout in globalExercise.workoutHistoryList{
             for set in workout.workoutSetList{
-                test.append((count, set.weight))
+                test.append((String(count), set.weight))
                 count+=1
             }
         }
@@ -47,6 +47,28 @@ class HistoryViewController: UIViewController {
 //        //let series = ChartSeries(weightChartArray)
 //        graph.add(series)
 //        graph.isUserInteractionEnabled = false
+        
+        let yMin = Double(globalExercise.startingWeight) * 0.9
+        let yMax = Double(globalExercise.startingWeight) + globalExercise.increment*12
+        
+        let chartConfig = BarsChartConfig(
+            valsAxisConfig: ChartAxisConfig(from: yMin, to: yMax, by:globalExercise.increment)
+        )
+
+        let frame = CGRect(x: 10, y: 200, width: 300, height: 600)
+                
+        let chart = BarsChart(
+            frame: frame,
+            chartConfig: chartConfig,
+            xTitle: "X axis",
+            yTitle: "Y axis",
+            bars: test,
+            color: UIColor.blue,
+            barWidth: 20
+        )
+
+        self.view.addSubview(chart.view)
+        self.graph = chart
     }
     
     

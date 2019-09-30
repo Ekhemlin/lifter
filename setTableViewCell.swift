@@ -10,6 +10,11 @@ import UIKit
 
 class setTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var repsLabel: UILabel!
+    @IBOutlet weak var weightLabel: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

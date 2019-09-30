@@ -13,9 +13,11 @@ import UIKit
 
 class NewExerciseViewController: UIViewController, UITextFieldDelegate {
 
+    var editExercise = false
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var incrementTextField: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,13 @@ class NewExerciseViewController: UIViewController, UITextFieldDelegate {
         //Costumizing keyboard types 
         weightTextField.keyboardType = .decimalPad
         incrementTextField.keyboardType = .decimalPad
+        
+        if(editExercise){
+            nameTextField.text = globalExercise.name
+            weightTextField.text = String(globalExercise.startingWeight)
+            incrementTextField.text = String(globalExercise.increment)
+        }
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -39,8 +48,16 @@ class NewExerciseViewController: UIViewController, UITextFieldDelegate {
             let weight = (Int(weightTextField.text ?? "50")) ?? 50
             let exerciseName = nameTextField.text ?? "Exercise"
             let increment = (Double(incrementTextField.text ?? "5.0")) ?? 5.0
-            let newExercise = Exercise(name: exerciseName, startWeight: weight, increment: increment)
-            realm.add(newExercise)
+        
+            if(!editExercise){
+                let newExercise = Exercise(name: exerciseName, startWeight: weight, increment: increment)
+                realm.add(newExercise)
+            }
+            else{
+                globalExercise.startingWeight = weight
+                globalExercise.name = exerciseName
+                globalExercise.increment = increment
+            }
         }
         performSegue(withIdentifier: "backToMenu", sender: nil)
     }

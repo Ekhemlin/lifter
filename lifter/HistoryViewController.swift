@@ -22,31 +22,15 @@ class HistoryViewController: UIViewController {
         var workoutHistory = globalExercise.workoutHistoryList
         var weightChartArray: [Double] = []
         
-        var test: [(String, Double)] = []
+        var chartData: [(String, Double)] = []
         
         var count = 0
         for workout in globalExercise.workoutHistoryList{
             for set in workout.workoutSetList{
-                test.append((String(count), set.weight))
+                chartData.append((String(count), set.weight))
                 count+=1
             }
         }
-      
-//
-//        let data = [
-//            (x: 0, y: 0),
-//            (x: 1, y: 3.1),
-//            (x: 4, y: 2),
-//            (x: 5, y: 4.2),
-//            (x: 7, y: 5),
-//            (x: 9, y: 9),
-//            (x: 10, y: 8)
-//        ]
-//
-//        let series = ChartSeries(data: test)
-//        //let series = ChartSeries(weightChartArray)
-//        graph.add(series)
-//        graph.isUserInteractionEnabled = false
         
         let yMin = Double(globalExercise.startingWeight) * 0.9
         let yMax = Double(globalExercise.startingWeight) + globalExercise.increment*12
@@ -62,18 +46,24 @@ class HistoryViewController: UIViewController {
             chartConfig: chartConfig,
             xTitle: "X axis",
             yTitle: "Y axis",
-            bars: test,
+            bars: chartData,
             color: UIColor.blue,
             barWidth: 20
         )
-
+        
         self.view.addSubview(chart.view)
         self.graph = chart
     }
     
     
     @IBAction func predCommand(_ sender: Any) {
-        var pred = try! progressPredictor().prediction(days: 2.0, weight: 90)
+        
+        let lastWeight = globalExercise.workoutHistoryList.last?.workoutSetList.last?.weight
+        let lastDay =  globalExercise.workoutHistoryList.last?.date
+        let currentDate = Date()
+        let calendar = Calendar.current
+        let daysSinceWorkout: Int = calendar.dateComponents([.day], from: lastDay!, to: currentDate).day!
+        var pred = try! progressPredictor().prediction(days: Double(daysSinceWorkout), weight: lastWeight!)
         predLabel.text = String(Int(pred.nextDay))
     }
     

@@ -221,7 +221,7 @@
         <!--New Exercise View Controller-->
         <scene sceneID="YQV-BZ-W3Z">
             <objects>
-                <viewController id="PYF-7B-RdJ" customClass="NewExerciseViewController" customModule="lifter" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewExerciseViewController" id="PYF-7B-RdJ" customClass="NewExerciseViewController" customModule="lifter" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7t0-5E-Y5x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
